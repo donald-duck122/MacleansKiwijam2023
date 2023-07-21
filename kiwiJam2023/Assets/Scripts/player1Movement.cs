@@ -4,37 +4,60 @@ using UnityEngine;
 
 public class player1Movement : MonoBehaviour
 {
-    public float moveSpeed;
-    public Rigidbody2D rb;
+    public float vertical;
+    public float horizontal;
+    private float dirX;
 
-    private float horizontal;
-    private float vertical;
-    private Vector2 movement;
+    private BoxCollider2D coll;
+
+    private Rigidbody2D rb;
+
+    [SerializeField] private LayerMask jumpableGround;
+
+
+    public void Start(){
+
+        rb = GetComponent<Rigidbody2D>();
+        coll = GetComponent<BoxCollider2D>();
+
+    }
+
 
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKey("w")){
-            movement.x = 0;
-            movement.y = 1;
-        } else if(Input.GetKey("s")){
-            movement.x = 0;
-            movement.y = -1;
-        } else if(Input.GetKey("a")){
-            movement.x = -1;
-            movement.y = 0;
-        } else if(Input.GetKey("d")){
-            movement.x = 1;
-            movement.y = 0;
-        } else {
-            movement.x = 0;
-            movement.y = 0;
+        dirX = Input.GetAxisRaw("Horizontal");
+    
+        if(Input.GetButtonDown("Jump") && IsGrounded()){
+           rb.velocity = new Vector2(rb.velocity.x, vertical*1.5f);
+
+        } 
+
+        if(Input.GetKeyDown("d") && !IsGrounded()){
+            rb.velocity = new Vector2(dirX * horizontal/1.5f, rb.velocity.y);
         }
+
+        if(Input.GetKeyDown("a") && !IsGrounded()){
+            rb.velocity = new Vector2(horizontal/1.5f * dirX, rb.velocity.y);
+        }
+
+        if(Input.GetKeyDown("d") && IsGrounded()){
+           rb.velocity = new Vector2(horizontal, vertical/1.2f);
+        } 
+
+        if(Input.GetKeyDown("a") && IsGrounded()){
+           rb.velocity = new Vector2(-horizontal, vertical/1.2f);
+        } 
+
+      
+    }
+
+    private bool IsGrounded(){
+        return Physics2D.BoxCast(coll.bounds.center, coll.bounds.size, 0f, Vector2.down, .1f, jumpableGround);
     }
 
     // called a set amount of times a second, better for physics
     void FixedUpdate() 
     {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
     }
 }
