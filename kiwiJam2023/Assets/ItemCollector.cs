@@ -7,7 +7,7 @@ using TMPro;
 public class ItemCollector : MonoBehaviour
 {
 
-    private int vial = 0;
+    public int vial = 0;
     [SerializeField] private TextMeshProUGUI vialText;
     
 private void OnTriggerEnter2D(Collider2D collision){
