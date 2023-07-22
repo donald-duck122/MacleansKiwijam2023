@@ -13,13 +13,11 @@ public class player1Movement : MonoBehaviour
     private BoxCollider2D coll;
 
     private Rigidbody2D rb;
-    private GameObject audioManager;
 
     [SerializeField] private LayerMask jumpableGround;
 
 
     public void Start(){
-        audioManager = FindObjectOfType<AudioManager>()
         rb = GetComponent<Rigidbody2D>();
         coll = GetComponent<BoxCollider2D>();
 
@@ -39,7 +37,7 @@ public class player1Movement : MonoBehaviour
         if(Input.GetButtonDown("Jump") && IsGrounded()){
            rb.velocity = new Vector2(rb.velocity.x, vertical*1.5f);
            animator.SetBool("moving", true);
-           audioManager.play("slimeJump");
+           //FindObjectOfType<AudioManager>().play("slimeJump");
         } 
 
         //already in air
@@ -55,13 +53,13 @@ public class player1Movement : MonoBehaviour
         if(Input.GetKeyDown("d") && IsGrounded()){
            rb.velocity = new Vector2(horizontal, vertical/1.2f);
            animator.SetBool("moving", true);
-           audioManager.play("slimeJump");
+           //FindObjectOfType<AudioManager>().play("slimeJump");
         } 
 
         if(Input.GetKeyDown("a") && IsGrounded()){
            rb.velocity = new Vector2(-horizontal, vertical/1.2f);
            animator.SetBool("moving", true);
-           audioManager.play("slimeJump");
+           //FindObjectOfType<AudioManager>().play("slimeJump");
         } 
     }
 
