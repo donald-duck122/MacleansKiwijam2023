@@ -10,7 +10,14 @@ public class PlayerGrowth : MonoBehaviour
     public float growthInterval = 1.0f;
     private float newScale;
     private float timePassed;
-    public float maxScale;
+    public GameObject GameManager;
+    private gameManager gameManager;
+
+    void Start(){
+        gameManager = GameManager.GetComponent<gameManager>();
+
+    }
+
     
     // Start is called before the first frame update
     public void reset()
@@ -23,14 +30,15 @@ public class PlayerGrowth : MonoBehaviour
 
     void Update(){
         timePassed += Time.deltaTime;
-        if(timePassed>growthInterval && newScale < maxSize){
+        if(timePassed>growthInterval && newScale < maxSize && gameManager.dying == false){
             timePassed = 0;
             newScale = newScale + growthRate;
             transform.localScale = new Vector3(newScale, newScale, 1.0f);
         }
 
-        if (newScale >= maxScale){
-            Debug.Log("die");
+        if (newScale >= maxSize){
+            newScale = initialScale.z;
+            gameManager.GetComponent<gameManager>().onDeath();
 
         }
     }

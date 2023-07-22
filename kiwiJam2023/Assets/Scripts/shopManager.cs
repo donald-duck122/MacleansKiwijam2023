@@ -78,7 +78,7 @@ public class shopManager : MonoBehaviour
     }
 
     public void buy5(){
-        ItemCollector.vial = 0;
+        ItemCollector.vial -= money;
         upgrade += 1;
 
     }
