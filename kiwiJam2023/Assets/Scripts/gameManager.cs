@@ -17,7 +17,6 @@ public class gameManager : MonoBehaviour
         if(timePassed > 1.2f && dying == true){
             dying = false;
             playerRenderer.enabled = false;
-            player.transform.localScale = new Vector2(20.1f, 20.1f);
             shopGUI.SetActive(true);
             playerAnimator.SetBool("dying", false);
         }
