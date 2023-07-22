@@ -7,6 +7,7 @@ public class Stick : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision){
         if (collision.gameObject.name == "Player"){
             collision.gameObject.transform.SetParent(transform);
+
         }
     }
 
@@ -15,5 +16,6 @@ public class Stick : MonoBehaviour
             collision.gameObject.transform.SetParent(null);
         }
     }
-
+    
 }
+
