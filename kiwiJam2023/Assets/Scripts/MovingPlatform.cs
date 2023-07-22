@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Causes player scale to be messed up
 public class MovingPlatform : MonoBehaviour
 {
     public float moveSpeed = 5f;     
