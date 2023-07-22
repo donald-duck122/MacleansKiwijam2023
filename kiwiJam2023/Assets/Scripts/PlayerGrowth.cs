@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class PlayerGrowth : MonoBehaviour
 {
-
     public float growthRate = 0.1f;
     public float maxSize = 10.0f;
     private Vector3 initialScale;
@@ -13,15 +12,11 @@ public class PlayerGrowth : MonoBehaviour
     
 
     // Start is called before the first frame update
-    void Start()
+    public  void reset()
     {
-        
         initialScale = transform.localScale;
-        newScale = transform.localScale.z;
-
+        newScale = initialScale.z;
         StartCoroutine(GrowOverTime());
-
-        
     }
 
     private IEnumerator GrowOverTime()
