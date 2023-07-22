@@ -1104,6 +1104,34 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 283179023}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: buy5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: shopManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 6732634113162050779, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 6760041923446274082, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: buy2
@@ -1832,6 +1860,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 7450583819823179434, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
+      propertyPath: maxSize
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7450583819823179434, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1955425297}
     - target: {fileID: 8934746470258065776, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
       propertyPath: ShopText
       value: 

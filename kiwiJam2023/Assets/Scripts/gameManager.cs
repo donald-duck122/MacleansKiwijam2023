@@ -10,15 +10,15 @@ public class gameManager : MonoBehaviour
     public GameObject shopGUI;
     public Animator playerAnimator;
     private float timePassed;
-    private bool dying;
+    public bool dying = true;
 
     void Update(){
         timePassed += Time.deltaTime;
         if(timePassed > 1.2f && dying == true){
-            dying = false;
             playerRenderer.enabled = false;
             shopGUI.SetActive(true);
             playerAnimator.SetBool("dying", false);
+
         }
     }
 
@@ -32,13 +32,15 @@ public class gameManager : MonoBehaviour
         playerRb.constraints = RigidbodyConstraints2D.FreezePosition;
         playerAnimator.SetBool("dying", true);
         dying = true;
+
     }
 
     public void restart(){
         player.transform.position = new Vector2(0,0);
-        player.transform.localScale = new Vector2(0.1f, 0.1f);
+        player.transform.localScale = new Vector2(0.01f, 0.01f);
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
         playerRenderer.enabled = true;
+        dying = false;
     }
 }
