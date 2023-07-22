@@ -15,8 +15,8 @@ public class gameManager : MonoBehaviour
     }
 
     public void restart(){
-        Debug.Log("what");
         player.transform.position = new Vector2(0,0);
-        Debug.Log("restarting");
+        player.transform.localScale = new Vector2(0.1f, 0.1f);
+        playerRb.constraints = RigidbodyConstraints2D.None;
     }
 }

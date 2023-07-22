@@ -6,7 +6,9 @@ public class trap : MonoBehaviour
 {
     public GameObject gameManager;
 
-    private void OnCollisionEnter(Collision other) {
-
+    private void OnCollisionEnter2D(Collision2D other) {
+        if(other.gameObject.name == ("Player")){
+            gameManager.GetComponent<gameManager>().onDeath();
+        }
     }
 }
