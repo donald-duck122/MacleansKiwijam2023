@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class NewBehaviourScript : MonoBehaviour
 {
+    private float growthRate = 0.1f;
 
     [SerializeField] private Transform player;
     // Update is called once per frame
