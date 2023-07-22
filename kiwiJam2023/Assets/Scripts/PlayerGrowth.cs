@@ -10,6 +10,7 @@ public class PlayerGrowth : MonoBehaviour
     public float growthInterval = 1.0f;
     private float newScale;
     private float timePassed;
+    public float maxScale;
     
     // Start is called before the first frame update
     public void reset()
@@ -26,6 +27,11 @@ public class PlayerGrowth : MonoBehaviour
             timePassed = 0;
             newScale = newScale + growthRate;
             transform.localScale = new Vector3(newScale, newScale, 1.0f);
+        }
+
+        if (newScale >= maxScale){
+            Debug.Log("die");
+
         }
     }
 }

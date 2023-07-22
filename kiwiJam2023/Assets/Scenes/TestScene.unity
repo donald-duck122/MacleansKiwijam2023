@@ -441,7 +441,7 @@ MonoBehaviour:
   vial: 0
   multiplier: 1
   vialText: {fileID: 650945346}
-  ShopText: {fileID: 0}
+  ShopText: {fileID: 1991705936}
 --- !u!1 &1483229922
 GameObject:
   m_ObjectHideFlags: 0
@@ -656,6 +656,17 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &1991705936 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6560551480216576132, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
+  m_PrefabInstance: {fileID: 1189790274703815957}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &890664285197565448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -852,7 +863,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 6510864169218212505, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47314831d6676164c9b5dfee3ce242ab, type: 3}

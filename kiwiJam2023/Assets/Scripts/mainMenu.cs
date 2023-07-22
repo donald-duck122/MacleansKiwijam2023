@@ -8,4 +8,8 @@ public class mainMenu : MonoBehaviour
     public void PlayGame(){
         SceneManager.LoadScene(1);
     }
+    public void Home(){
+        SceneManager.LoadScene(0);
+
+    }
 }

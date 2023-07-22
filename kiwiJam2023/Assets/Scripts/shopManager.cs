@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+
 
 public class shopManager : MonoBehaviour
 {
@@ -11,6 +13,13 @@ public class shopManager : MonoBehaviour
     private PlayerGrowth PlayerGrowth;
     private int money;
     private float upgrade = 1;
+    [SerializeField] private TextMeshProUGUI vialCost1;
+    [SerializeField] private TextMeshProUGUI vialCost2;
+    [SerializeField] private TextMeshProUGUI vialCost3;
+    [SerializeField] private TextMeshProUGUI vialCost4;
+    [SerializeField] private TextMeshProUGUI vialCost5;
+
+
 
 
      private void Start()
@@ -18,12 +27,20 @@ public class shopManager : MonoBehaviour
         ItemCollector = player.GetComponent<ItemCollector>();
         player1Movement = player.GetComponent<player1Movement>();
         PlayerGrowth = player.GetComponent<PlayerGrowth>();
+        
 
     }
 
      private void Update()
     {
         money = (int) (Mathf.Log(upgrade + 1.5f) * 50f);
+        vialCost1.text = "" + money;
+        vialCost2.text = "" + money;
+        vialCost3.text = "" + money;
+        vialCost4.text = "" + money;
+        vialCost5.text = "" + money;
+    
+
     }
 
 
@@ -59,4 +76,13 @@ public class shopManager : MonoBehaviour
             upgrade += 1;
         }
     }
+
+    public void buy5(){
+        ItemCollector.vial = 0;
+        upgrade += 1;
+
+    }
+
+
+
 }

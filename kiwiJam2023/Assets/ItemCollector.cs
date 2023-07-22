@@ -28,7 +28,7 @@ private void OnTriggerEnter2D(Collider2D collision){
 }
 
 void Update(){
-    vialText.text = "Vials: " + vial;
+    vialText.text = "" + vial;
     ShopText.text = "" + vial;
 }
 
