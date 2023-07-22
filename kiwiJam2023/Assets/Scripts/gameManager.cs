@@ -10,7 +10,18 @@ public class gameManager : MonoBehaviour
     public GameObject shopGUI;
     public Animator playerAnimator;
     private float timePassed;
+    private bool dying;
 
+    void Update(){
+        timePassed += Time.deltaTime;
+        if(timePassed > 1.2f && dying == true){
+            dying = false;
+            playerRenderer.enabled = false;
+            player.transform.localScale = new Vector2(20.1f, 20.1f);
+            shopGUI.SetActive(true);
+            playerAnimator.SetBool("dying", false);
+        }
+    }
 
     public void Start(){
         restart();
@@ -18,9 +29,10 @@ public class gameManager : MonoBehaviour
 
     public void onDeath(){
         //makes sure the player cannot move before opening the shop
+        timePassed = 0;
         playerRb.constraints = RigidbodyConstraints2D.FreezePosition;
         playerAnimator.SetBool("dying", true);
-        StartCoroutine(WaitAndContinue(1.2f));
+        dying = true;
     }
 
     public void restart(){
@@ -29,14 +41,5 @@ public class gameManager : MonoBehaviour
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
         playerRenderer.enabled = true;
-    }
-
-    private IEnumerator WaitAndContinue(float seconds)
-    {
-        yield return new WaitForSeconds(seconds); // Wait for the specified seconds
-        playerRenderer.enabled = false;
-            player.transform.localScale = new Vector2(20.1f, 20.1f);
-        shopGUI.SetActive(true);
-        playerAnimator.SetBool("dying", false);
     }
 }
