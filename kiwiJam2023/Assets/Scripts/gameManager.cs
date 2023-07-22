@@ -34,7 +34,7 @@ public class gameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(seconds); // Wait for the specified seconds
         playerRenderer.enabled = false;
-                player.transform.localScale = new Vector2(20.1f, 20.1f);
+            player.transform.localScale = new Vector2(20.1f, 20.1f);
         shopGUI.SetActive(true);
         playerAnimator.SetBool("dying", false);
     }

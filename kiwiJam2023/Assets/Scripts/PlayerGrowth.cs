@@ -9,25 +9,37 @@ public class PlayerGrowth : MonoBehaviour
     private Vector3 initialScale;
     public float growthInterval = 1.0f;
     private float newScale;
+    private float timePassed;
     
 
     // Start is called before the first frame update
-    public  void reset()
+    public void reset()
     {
         initialScale = transform.localScale;
         newScale = initialScale.z;
-        StartCoroutine(GrowOverTime());
+        timePassed = 0f;
+        //StartCoroutine(GrowOverTime());
     }
 
-    private IEnumerator GrowOverTime()
-    {
-        while (newScale < maxSize && newScale < maxSize)
-        {
-            yield return new WaitForSeconds(growthInterval);
-        
+    void Update(){
+        timePassed += Time.deltaTime;
+        if(timePassed>1 && newScale < maxSize){
+            timePassed = 0;
             newScale = newScale + growthRate;
             transform.localScale = new Vector3(newScale, newScale, 1.0f);
-
         }
+        Debug.Log(timePassed);
     }
+
+    // private IEnumerator GrowOverTime()
+    // {
+    //     while (newScale < maxSize)
+    //     {
+    //         yield return new WaitForSeconds(growthInterval);
+        
+    //         newScale = newScale + growthRate;
+    //         transform.localScale = new Vector3(newScale, newScale, 1.0f);
+    //     }
+    //     Debug.Log("stopped");
+    // }
 }

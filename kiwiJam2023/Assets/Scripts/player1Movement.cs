@@ -37,7 +37,6 @@ public class player1Movement : MonoBehaviour
         //jumping
         if(Input.GetButtonDown("Jump") && IsGrounded()){
            rb.velocity = new Vector2(rb.velocity.x, vertical*1.5f);
-           Debug.Log("set jump");
            animator.SetBool("moving", true);
         } 
 
@@ -53,13 +52,11 @@ public class player1Movement : MonoBehaviour
         //on ground
         if(Input.GetKeyDown("d") && IsGrounded()){
            rb.velocity = new Vector2(horizontal, vertical/1.2f);
-           Debug.Log("set d");
            animator.SetBool("moving", true);
         } 
 
         if(Input.GetKeyDown("a") && IsGrounded()){
            rb.velocity = new Vector2(-horizontal, vertical/1.2f);
-           Debug.Log("set a");
            animator.SetBool("moving", true);
         } 
     }
