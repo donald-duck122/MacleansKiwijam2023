@@ -17,7 +17,7 @@ public class PlayerGrowth : MonoBehaviour
     {
         
         initialScale = transform.localScale;
-        newScale = transform.localScale.x;
+        newScale = transform.localScale.z;
 
         StartCoroutine(GrowOverTime());
 
