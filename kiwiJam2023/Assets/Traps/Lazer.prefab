@@ -27,12 +27,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4348746641907248629}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 7.58, y: -4.01, z: 0}
-  m_LocalScale: {x: 20, y: 1, z: 1}
+  m_LocalPosition: {x: 5.734, y: -2.021, z: 0}
+  m_LocalScale: {x: 0.9508904, y: 0.87073725, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &673897468047518884
 SpriteRenderer:
@@ -75,7 +75,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2413806693520163455, guid: a86470a33a6bf42c4b3595704624658b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: a1079a41a4cd54adfaab4e965374664c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -101,6 +101,10 @@ MonoBehaviour:
   spawnInterval: 5
   despawnDelay: 2
   damageAmount: 1
+  activatedBase: {fileID: 21300000, guid: a840d9081eda34c818ae76472621fcf1, type: 3}
+  deactivatedBase: {fileID: 21300000, guid: ded17dd8f04854f9180f3723f480465e, type: 3}
+  laserBase: {fileID: 0}
+  gameManager: {fileID: 0}
 --- !u!61 &3364248276696350603
 BoxCollider2D:
   m_ObjectHideFlags: 0

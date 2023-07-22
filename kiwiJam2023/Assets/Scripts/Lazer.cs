@@ -7,6 +7,10 @@ public class Lazer : MonoBehaviour
 
     public int damageAmount = 1; // The amount of damage the laser does to the player
 
+    public Sprite activatedBase;
+    public Sprite deactivatedBase;
+    public GameObject laserBase; 
+    public GameObject gameManager;
     private SpriteRenderer spriteRenderer;
     private BoxCollider2D boxCollider;
 
@@ -22,6 +26,7 @@ public class Lazer : MonoBehaviour
     {
         spriteRenderer.enabled = true;
         boxCollider.enabled = true;
+        laserBase.GetComponent<SpriteRenderer>().sprite = activatedBase;
 
         Invoke("DespawnLaser", despawnDelay);
     }
@@ -30,13 +35,14 @@ public class Lazer : MonoBehaviour
     {
         spriteRenderer.enabled = false;
         boxCollider.enabled = false;
+        laserBase.GetComponent<SpriteRenderer>().sprite = deactivatedBase;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
-            Debug.Log("Die");
+            gameManager.GetComponent<gameManager>().onDeath();
         }
     }
 }
