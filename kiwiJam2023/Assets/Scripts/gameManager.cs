@@ -9,6 +9,7 @@ public class gameManager : MonoBehaviour
     public Rigidbody2D playerRb;
     public GameObject shopGUI;
     public Animator playerAnimator;
+    private float timePassed;
 
 
     public void Start(){

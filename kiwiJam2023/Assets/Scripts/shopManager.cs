@@ -18,10 +18,11 @@ public class shopManager : MonoBehaviour
 
     public void buy1(){
         //money count or somethings
-        
-        if (ItemCollector.vial > 10){
+        Debug.Log("clicking");
+        if (ItemCollector.vial >= 10){
             ItemCollector.vial -= 10;
             player1Movement.vertical *= 2;
+            Debug.Log("LOL");
         }
     }
 }
