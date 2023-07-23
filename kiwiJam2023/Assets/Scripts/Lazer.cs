@@ -40,7 +40,8 @@ public class Lazer : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player"))
+        Debug.Log("should die");
+        if(collision.gameObject.name == ("Player"))
         {
             gameManager.GetComponent<gameManager>().onDeath();
         }
