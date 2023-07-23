@@ -1686,7 +1686,7 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 64ee0cff882454cb9ac66a444a0cd19c, type: 3}
---- !u!1001 &6501209085235968677
+--- !u!1001 &3009256872435986530
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -1694,71 +1694,59 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1089975117117786003, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
-      propertyPath: m_Name
-      value: Vial
-      objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalPosition.x
       value: -8.11
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.06
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalRotation.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalRotation.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalRotation.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4250578662126513972, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+    - target: {fileID: 2027736852861799769, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5057315700797273868, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.x
-      value: 0.08
+    - target: {fileID: 5767925581834093005, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
+      propertyPath: m_Name
+      value: Vial
       objectReference: {fileID: 0}
-    - target: {fileID: 5057315700797273868, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
-      propertyPath: m_SpriteTilingProperty.oldSize.y
-      value: 0.08
-      objectReference: {fileID: 0}
-    - target: {fileID: 6413302484229342090, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 58a63e39fce354f51bef8fafe62fed95, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 226bd0299b3f7fe48999d72b81336845, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: f138fdbfdcd624f068ba91e5ea62f817, type: 3}
 --- !u!1001 &7743617578109437357
 PrefabInstance:
   m_ObjectHideFlags: 0
