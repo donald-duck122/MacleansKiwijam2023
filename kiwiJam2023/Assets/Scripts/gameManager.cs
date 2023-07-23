@@ -11,6 +11,10 @@ public class gameManager : MonoBehaviour
     public Animator playerAnimator;
     private float timePassed;
     public bool dying = true;
+    public GameObject originalObject;
+    private GameObject copiedObject;
+    
+
 
     void Update(){
         timePassed += Time.deltaTime;
@@ -24,6 +28,7 @@ public class gameManager : MonoBehaviour
 
     public void Start(){
         restart();
+        originalObject.SetActive(false):
     }
 
     public void onDeath(){
@@ -32,7 +37,7 @@ public class gameManager : MonoBehaviour
         playerRb.constraints = RigidbodyConstraints2D.FreezePosition;
         playerAnimator.SetBool("dying", true);
         dying = true;
-
+        DespawnVials();
     }
 
     public void restart(){
@@ -40,8 +45,23 @@ public class gameManager : MonoBehaviour
         player.transform.localScale = new Vector2(0.01f, 0.01f);
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
-        playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        layerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         playerRenderer.enabled = true;
         dying = false;
+        RespawnVials();
+    }
+
+
+    public void RespawnVials()
+    {
+        copiedObject = Instantiate(originalObject, originalObject.transform.position, originalObject.transform.rotation);
+        copiedObject.SetActive(true);
+        
+    }
+
+    public void DespawnVials()
+    {
+        Destroy(copiedObject);
+
     }
 }
