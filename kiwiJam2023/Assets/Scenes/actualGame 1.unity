@@ -1862,8 +1862,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7450583819823179434, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
       propertyPath: maxSize
-      value: 0.2
+      value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 7450583819823179434, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
+      propertyPath: GameManager
+      value: 
+      objectReference: {fileID: 1955425297}
     - target: {fileID: 7450583819823179434, guid: ec8caf22f73d34fa7973197c87340aae, type: 3}
       propertyPath: gameManager
       value: 
@@ -2125,6 +2129,7 @@ MonoBehaviour:
   playerRb: {fileID: 1447651082}
   shopGUI: {fileID: 283179022}
   playerAnimator: {fileID: 1447651079}
+  dying: 0
 --- !u!4 &1955425299
 Transform:
   m_ObjectHideFlags: 0
