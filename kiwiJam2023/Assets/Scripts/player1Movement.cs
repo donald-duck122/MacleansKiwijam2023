@@ -29,7 +29,7 @@ public class player1Movement : MonoBehaviour
     {
 
         if(IsGrounded()){
-            animator.SetBool("moving", true);
+            animator.SetBool("moving", false);
         }
         dirX = Input.GetAxisRaw("Horizontal");
     
