@@ -11,6 +11,7 @@ public class gameManager : MonoBehaviour
     public Animator playerAnimator;
     private float timePassed;
     public bool dying = true;
+    private bool resetting = false;
     public GameObject originalObject;
     private GameObject copiedObject;
     
@@ -23,6 +24,10 @@ public class gameManager : MonoBehaviour
             shopGUI.SetActive(true);
             playerAnimator.SetBool("dying", false);
 
+        }
+
+        if(Input.GetKeyDown("r")){
+            onDeath();
         }
     }
 
@@ -41,7 +46,7 @@ public class gameManager : MonoBehaviour
     }
 
     public void restart(){
-        player.transform.position = new Vector2(0,-2);
+        player.transform.position = new Vector2(100, 6); // 0 -2;
         player.transform.localScale = new Vector2(0.01f, 0.01f);
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
