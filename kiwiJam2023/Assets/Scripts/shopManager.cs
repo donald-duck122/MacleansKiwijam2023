@@ -33,7 +33,7 @@ public class shopManager : MonoBehaviour
 
      private void Update()
     {
-        money = (int) (Mathf.Log(upgrade + 1.5f) * 50f);
+        money = (int) (upgrade*upgrade + 20);
         vialCost1.text = "" + money;
         vialCost2.text = "" + money;
         vialCost3.text = "" + money;

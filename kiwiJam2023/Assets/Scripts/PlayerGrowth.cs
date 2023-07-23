@@ -12,6 +12,7 @@ public class PlayerGrowth : MonoBehaviour
     private float timePassed;
     public GameObject GameManager;
     private gameManager gameManager;
+    public bool Finished = false;
 
     void Start(){
         gameManager = GameManager.GetComponent<gameManager>();
@@ -30,7 +31,7 @@ public class PlayerGrowth : MonoBehaviour
 
     void Update(){
         timePassed += Time.deltaTime;
-        if(timePassed>growthInterval && newScale < maxSize && gameManager.dying == false){
+        if(timePassed>growthInterval && newScale < maxSize && gameManager.dying == false && Finished == false){
             timePassed = 0;
             newScale = newScale + growthRate;
             transform.localScale = new Vector3(newScale, newScale, 1.0f);

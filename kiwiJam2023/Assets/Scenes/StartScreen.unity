@@ -361,7 +361,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4339478327651612570, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4471318300633963127, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
@@ -385,11 +385,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5573187041611958669, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -280
+      value: -278
       objectReference: {fileID: 0}
     - target: {fileID: 5573187041611958669, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -150.36
+      value: -186
       objectReference: {fileID: 0}
     - target: {fileID: 6219589804995767507, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_Pivot.x
@@ -507,16 +507,19 @@ PrefabInstance:
       propertyPath: m_text
       value: 'w/a/d to hop
 
+        R to reset character
+
         collect vials
 
-        buy upgrades when you
-        die
+        buy
+        upgrades when you die
 
         Dodge obstacles
 
         Get to the end
 
-        good luck'
+        good
+        luck'
       objectReference: {fileID: 0}
     - target: {fileID: 6659674162996809567, guid: 885afb95daab0473db6b11eaf88a33c8, type: 3}
       propertyPath: m_margin.x

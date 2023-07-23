@@ -15,9 +15,17 @@ public class ending : MonoBehaviour
     private float initialScale;
     private bool playerEntered = false;
 
+    private PlayerGrowth PlayerGrowth;
+
+
+    void Start(){
+        PlayerGrowth = player.GetComponent<PlayerGrowth>();
+    }
+
     void OnTriggerEnter2D(Collider2D other) {
         Debug.Log("should be opening");
         if(other.gameObject.name == ("Player")){
+            PlayerGrowth.Finished = true;
             timePassed = 0;
             initialScale = player.transform.localScale.x;
             playerEntered = true;
