@@ -41,11 +41,11 @@ public class gameManager : MonoBehaviour
     }
 
     public void restart(){
-        player.transform.position = new Vector2(0,0);
+        player.transform.position = new Vector2(0,-2);
         player.transform.localScale = new Vector2(0.01f, 0.01f);
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
-        pSlayerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         playerRenderer.enabled = true;
         dying = false;
         RespawnVials();
