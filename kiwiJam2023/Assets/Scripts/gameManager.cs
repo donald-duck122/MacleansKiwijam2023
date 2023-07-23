@@ -38,9 +38,9 @@ public class gameManager : MonoBehaviour
     public void restart(){
         player.transform.position = new Vector2(0,0);
         player.transform.localScale = new Vector2(0.01f, 0.01f);
-        playerRb.freezeRotation = true;
         player.GetComponent<PlayerGrowth>().reset();
         playerRb.constraints = RigidbodyConstraints2D.None;
+        playerRb.constraints = RigidbodyConstraints2D.FreezeRotation;
         playerRenderer.enabled = true;
         dying = false;
     }
