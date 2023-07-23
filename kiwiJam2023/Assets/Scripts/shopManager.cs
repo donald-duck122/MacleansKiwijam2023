@@ -47,7 +47,7 @@ public class shopManager : MonoBehaviour
     public void buy1(){
         if (ItemCollector.vial >= money){
             ItemCollector.vial -= money;
-            player1Movement.vertical *= 1.5f;
+            player1Movement.vertical *= 1.2f;
             upgrade += 1;
         }
     }
@@ -55,7 +55,7 @@ public class shopManager : MonoBehaviour
     public void buy2(){
         if (ItemCollector.vial >= money){
             ItemCollector.vial -= money;
-            player1Movement.horizontal *= 1.5f;
+            player1Movement.horizontal *= 1.2f;
             upgrade += 1;
 
         }
@@ -64,7 +64,7 @@ public class shopManager : MonoBehaviour
     public void buy3(){
         if (ItemCollector.vial >= money){
             ItemCollector.vial -= money;
-            PlayerGrowth.growthRate /= 1.5f;
+            PlayerGrowth.growthRate /= 1.2f;
             upgrade += 1;
         }
     }
